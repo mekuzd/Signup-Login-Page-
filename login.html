@@ -202,9 +202,15 @@
         }
 
         if (isregistereduser === true) {
-            welcome.innerText = 'hello ' + LoginEmail + "  Welcome To Dashboard"
-            inp2.style.display = 'none'
-            dashboard.style.display = 'block'
+
+            for (let index = 0; index < userinfoarr.length; index++) {
+                userinfoarr[index];
+                welcome.innerText = 'hello ' + userinfoarr[index].firstName + "  Welcome To Dashboard"
+                inp2.style.display = 'none'
+                dashboard.style.display = 'block'
+            }
+
+
         }
 
         else { show.innerText = "account not registered go to sign up page" }
